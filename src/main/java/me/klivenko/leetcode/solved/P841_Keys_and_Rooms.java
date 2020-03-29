@@ -34,6 +34,7 @@ import java.util.Queue;
     Explanation: We can't enter the room with number 2.
     Note:
 
+
     1 <= rooms.length <= 1000
     0 <= rooms[i].length <= 1000
 
