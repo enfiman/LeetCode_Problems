@@ -1,4 +1,4 @@
-package me.klivenko.leetcode.in_progress;
+package me.klivenko.leetcode.solved;
 
 import javafx.util.Pair;
 import me.klivenko.leetcode.common.Assert;
