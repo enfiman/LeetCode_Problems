@@ -10,6 +10,15 @@ public class Assert {
         printBad(expected, actual);
     }
 
+    public static void equals(char[][] expected, char[][] actual){
+        if(Utils.convert(expected).equals(Utils.convert(actual))){
+            printCorrect(Utils.convert(actual).toString());
+            return;
+        }
+
+        printBad(Utils.convert(actual).toString(), Utils.convert(expected).toString());
+    }
+
     public static void equals(double expected, double actual){
         final double THRESHOLD = .0001;
 
@@ -47,7 +56,7 @@ public class Assert {
     }
 
     private static String printBad(String expected, String actual){
-        String message = "Wrong answer! correct answers is: \n" + expected + "\n but your answer is: " + actual;
+        String message = "Wrong answer! correct answers is: \n" + expected + "\n but your answer is:\n" + actual;
         System.out.println(message);
         return message;
     }
