@@ -10,6 +10,15 @@ public class Assert {
         printBad(expected, actual);
     }
 
+    public static void equals(Object expected, Object actual){
+        if(expected.equals(actual)){
+            printCorrect(actual.toString());
+            return;
+        }
+
+        printBad(expected.toString(), actual.toString());
+    }
+
     public static void equals(char[][] expected, char[][] actual){
         if(Utils.convert(expected).equals(Utils.convert(actual))){
             printCorrect(Utils.convert(actual).toString());
