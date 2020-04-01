@@ -1,4 +1,4 @@
-package me.klivenko.leetcode.in_progress;
+package me.klivenko.leetcode.solved;
 
 /*
 Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
@@ -22,11 +22,6 @@ return true, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
 import me.klivenko.leetcode.common.Assert;
 import me.klivenko.leetcode.common.Utils;
 import me.klivenko.leetcode.common.model.TreeNode;
-import me.klivenko.leetcode.solved.P257_Binary_Tree_Paths;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 /*
     https://leetcode.com/problems/path-sum/

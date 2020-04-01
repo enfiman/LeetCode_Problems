@@ -3,11 +3,6 @@ package me.klivenko.leetcode.solved;
 import me.klivenko.leetcode.common.Assert;
 import me.klivenko.leetcode.common.Utils;
 import me.klivenko.leetcode.common.model.TreeNode;
-import me.klivenko.leetcode.solved.P257_Binary_Tree_Paths;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 /*
 Given the root of a binary tree, each node has a value from 0 to 25 representing
