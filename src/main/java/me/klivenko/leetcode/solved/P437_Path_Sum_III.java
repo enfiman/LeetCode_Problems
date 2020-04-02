@@ -5,7 +5,6 @@ import me.klivenko.leetcode.common.Utils;
 import me.klivenko.leetcode.common.model.TreeNode;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /*
