@@ -21,6 +21,11 @@ public class Utils {
         print(messageBefore, convert(arr));
     }
 
+    public static void print(String messageBefore, String obj){
+        System.out.print(messageBefore);
+        System.out.println(obj);
+    }
+
     public static void print(int[][] arr, String messageAfter){
         print(convert(arr), messageAfter);
     }
