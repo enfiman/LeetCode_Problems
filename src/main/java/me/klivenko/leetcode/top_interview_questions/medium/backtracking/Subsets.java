@@ -1,7 +1,5 @@
 package me.klivenko.leetcode.top_interview_questions.medium.backtracking;
 
-import com.sun.xml.internal.ws.api.message.HeaderList;
-import me.klivenko.leetcode.common.Assert;
 import me.klivenko.leetcode.common.Utils;
 
 import java.util.*;
@@ -20,25 +18,13 @@ public class Subsets {
         1 2 3
          */
 
-        run(new int[]{1, 2, 3}, Arrays.asList(
-                new HashSet(Arrays.asList(3)),
-                new HashSet(Arrays.asList(1)),
-                new HashSet(Arrays.asList(2)),
-                new HashSet(Arrays.asList(1, 3)),
-                new HashSet(Arrays.asList(2, 3)),
-                new HashSet(Arrays.asList(1, 2)),
-                new HashSet(Arrays.asList(1, 2, 3))
-        ));
+        run(new int[]{1, 2, 3});
     }
 
-    public static void run(int[] nums, List<Set<Integer>> correctAnswer) {
+    public static void run(int[] nums) {
         Utils.print("start app with: ", nums);
         List<List<Integer>> result = new Solution().subsets(nums);
-        List<Set<Integer>> converted = new ArrayList();
-        for (List<Integer> integers : result) {
-            converted.add(new HashSet<>(integers));
-        }
-        Assert.equals(correctAnswer, converted);
+        System.out.println(result);
     }
 
     static class Solution {
@@ -53,14 +39,40 @@ public class Subsets {
 
             for(int i = pos; i < nums.length; i++){
                 path.add(nums[i]);
-                backTracking(nums, pos + 1, len, path);
+                backTracking(nums, i + 1, len, path);
                 path.remove(path.size() - 1);
             }
         }
 
         public List<List<Integer>> subsets(int[] nums) {
-            for(int i = 0; i < nums.length; i++){
-                backTracking(nums, i, i + 1, new ArrayList<>());
+            for(int i = 0; i < nums.length + 1; i++){
+                backTracking(nums, 0, i, new ArrayList<>());
+            }
+            return result;
+        }
+    }
+
+    static class Solution_BitMask {
+        private List<Integer> calc(int[] nums, int p){
+            String s = Integer.toBinaryString(p);
+
+            while(s.length() != nums.length){
+                s = "0" + s;
+            }
+
+            List<Integer> result = new ArrayList<>();
+
+            for(int i = 0; i < s.length(); i++){
+                if(s.charAt(i) == '1') result.add(nums[nums.length - 1 - i]);
+            }
+            return result;
+        }
+
+        public List<List<Integer>> subsets(int[] nums) {
+            List<List<Integer>> result = new ArrayList<>();
+
+            for(int i = 0; i < (int)Math.pow(2, nums.length); i++){
+                result.add(calc(nums, i));
             }
 
             return result;
