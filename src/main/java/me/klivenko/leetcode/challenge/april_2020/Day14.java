@@ -56,10 +56,7 @@ public class Day14 {
 
         run("abcdefg", new int[][]{{1,1},{1,1},{0,2},{1,3}}, "efgabcd");
 
-
         run("mecsk", new int[][]{{1,4},{0,5},{0,4},{1,1},{1,5}}, "kmecs");
-
-
     }
 
     public static void run(String s, int[][] shift, String correctAnswer) {
