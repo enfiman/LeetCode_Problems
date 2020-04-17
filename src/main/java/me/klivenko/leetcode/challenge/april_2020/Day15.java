@@ -1,8 +1,5 @@
 package me.klivenko.leetcode.challenge.april_2020;
 
-import me.klivenko.leetcode.common.Assert;
-import me.klivenko.leetcode.common.Utils;
-
 /*
   Product of Array Except Self
 Solution
