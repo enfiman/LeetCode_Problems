@@ -33,7 +33,7 @@ import java.util.Queue;
 /*
     https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/530/week-3/3301/
  */
-public class Day18 {
+public class Day17 {
     public static void main(String[] args) {
         run(new char[][]{
                 "11110".toCharArray(),
